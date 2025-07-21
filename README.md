@@ -1,6 +1,3 @@
-Below is a well-structured **README.md** file for the Semantic Patent Chatbot project based on the provided description. It includes all the key details, setup instructions, and features in a clear, professional format suitable for a GitHub repository or project documentation.
-
----
 
 # Semantic Patent Chatbot
 
