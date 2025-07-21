@@ -1,116 +1,124 @@
-# Semantic Patent Chatbot
+ 🧠 Semantic Patent Chatbot
+A powerful ChatGPT-style semantic patent chatbot built with Streamlit, Sentence Transformers, FAISS, and Google Patent Web Scraping via DuckDuckGo.
 
-A powerful **Streamlit-based chatbot** designed to perform **semantic patent searches** using sentence embeddings. This tool helps users find relevant patent abstracts based on natural language queries, with support for user login, personalized chat history, and year-based filtering.
+This tool enables users to semantically search patents, explore top relevant paragraphs, and handle multi-turn chats with history — all without relying on commercial APIs.
 
----
+🚀 Features
+✅ ChatGPT-like conversational interface
 
-## Features
+✅ Semantic understanding with Sentence-BERT embeddings
 
-✅ ChatGPT-like interface with semantic understanding  
-✅ **Login & signup system** with persistent session handling  
-✅ **Patent search powered by DuckDuckGo + Semantic Embeddings**  
-✅ Optional **year-based filtering** (e.g., show patents after 2018)  
-✅ **Relevance scores** displayed for each result  
-✅ **History stored per user** (or in session if not logged in)  
-✅ “No patents found” message for unmatched queries  
-✅ “Start New Chat” functionality  
-✅ Local and offline-friendly with zero commercial APIs
+✅ Dual mode search:
 
----
+Local search via FAISS (offline fast vector search)
 
-## Project Structure
+Web scraping via DuckDuckGo and Google Patents
 
-chatbot_app/
-│
-├── app.py # Main Streamlit app
-├── auth.py # Signup/login/session management
-├── chatbot_model.py # Loads model and handles semantic scoring
-├── history_manager.py # Stores and loads per-user history
-├── data/
-│ ├── users.json # JSON file of user credentials
-│ └── history/
-│ └── user1.json # Per-user chat history files
-├── requirements.txt # Python dependencies
-└── README.md
+✅ Natural year filters, e.g., "blockchain patents after 2019"
 
-yaml
-Copy code
+✅ Relevance scores with highlighted sections
 
----
+✅ Multi-turn conversation with history like ChatGPT
 
-## Requirements
+✅ User-friendly UI with search bar at the bottom
 
-Install dependencies using:
+✅ "No patents found" fallback responses
 
-```bash
-pip install -r requirements.txt
-🔧 requirements.txt Example
-txt
-Copy code
-streamlit
-sentence-transformers
-duckduckgo-search
-torch
-numpy
-scikit-learn
+✅ Modular design with login authentication
 
+✅ No paid APIs required — completely open-source and offline-friendly
 
-🧠 How It Works
-User inputs query in natural language.
-
-Chatbot:
-
-Retrieves patent links using DuckDuckGo (via search_patents_duckduckgo).
-
-Extracts key content from links.
-
-Converts both query and content into embeddings using all-MiniLM-L6-v2.
-
-Scores results using cosine similarity.
-
-Top results with highest semantic relevance are returned.
-
-🔐 Authentication
-Users can sign up and log in.
-
-If not logged in, searches are stored only for the session.
-
-When logged in:
-
-Chat history is saved to /data/history/<username>.json
-
-Multiple past chats are stored with timestamps
-
-📅 Filtering by Year
-Toggle the "Apply Year Filter" option
-
-Set the minimum year (e.g., 2015) to only get newer patents
-
-❗ Error Handling
-If no patents are found:
-
-User sees a warning message:
-
-❌ No patents found for your query. Try another search or adjust the filter.
-
-🏁 Running the App
+📁 Project Structure
 bash
-Copy code
+Copy
+Edit
+├── app.py                # Main Streamlit application
+├── auth.py               # Handles user signup/login
+├── chatbot_model.py      # Loads model, FAISS index, and performs semantic scoring
+├── history_manager.py    # Handles session/user chat history
+├── data/
+│   ├── users.json        # User authentication data
+│   └── history/
+│       └── user1.json    # Per-user chat histories
+├── requirements.txt      # Python dependencies
+└── README.md             # Project documentation
+⚙️ Requirements
+Install required Python packages:
+
+bash
+Copy
+Edit
+pip install -r requirements.txt
+✅ requirements.txt includes:
+nginx
+Copy
+Edit
+streamlit
+ddgs
+requests
+beautifulsoup4
+sentence-transformers
+torch
+💡 How It Works
+User enters a query → e.g., "biodegradable packaging after 2019"
+
+Backend Pipeline:
+
+✅ Parse query → extract date filters, categories, etc.
+
+✅ Encode query using SBERT (all-mpnet-base-v2).
+
+✅ Search Locally via FAISS for fast response, or scrape Google Patents via DuckDuckGo.
+
+✅ Extract top semantic matches with highlighted snippets.
+
+✅ Display responses in chat format with chat history.
+
+No matches? → returns friendly fallback messages.
+
+🔐 Authentication System
+Supports login/signup via users.json.
+
+Chat history saved per user under data/history/<username>.json.
+
+If not logged in, uses session state only.
+
+🕒 Year Filtering Example
+Supports natural language year filtering:
+
+"blockchain in healthcare after 2020"
+
+Automatically filters patents published after 2020.
+
+🛡️ Error Handling
+✅ Graceful fallback when no patents are found:
+
+plaintext
+Copy
+Edit
+❌ No patents found after 2020 for this query. Try a different term.
+🏃‍♂️ How to Run
+bash
+Copy
+Edit
 streamlit run app.py
+Visit http://localhost:8501 in your browser.
 
+🌱 Potential Future Improvements
+✅ Deploy to Streamlit Cloud / HuggingFace Spaces
 
-✨ Future Improvements
-Deploy to Streamlit Cloud or HuggingFace Spaces
+✅ Add country/domain filters
 
-Add support for filtering by country or domain
+✅ PDF previews of patents
 
-Integrate PDF patent preview
+✅ Full Elasticsearch pipeline for hybrid search
 
-Use FAISS for scalable vector search (for large local patent datasets)
+✅ Voice-based query input
 
-👩‍💻 Developed By
-Built for the Silofortune Hackathon – Data Science Track
-Contributors: Manasa A S and team
+👨‍💻 Authors
+Built for Silofortune Hackathon – Data Science Track
+Contributors: Yallappagouda Patil and team
 
-📄 License
-This project is licensed under the MIT License.
+📜 License
+Licensed under the MIT License — feel free to use, modify, and contribute!
+
