@@ -1,4 +1,4 @@
- 🧠 Semantic Patent Chatbot
+🧠 Semantic Patent Chatbot
 A powerful ChatGPT-style semantic patent chatbot built with Streamlit, Sentence Transformers, FAISS, and Google Patent Web Scraping via DuckDuckGo.
 
 This tool enables users to semantically search patents, explore top relevant paragraphs, and handle multi-turn chats with history — all without relying on commercial APIs.
@@ -121,4 +121,3 @@ Contributors: Yallappagouda Patil and team
 
 📜 License
 Licensed under the MIT License — feel free to use, modify, and contribute!
-
