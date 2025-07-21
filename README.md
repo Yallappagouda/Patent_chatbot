@@ -97,27 +97,6 @@ The chatbot supports natural language year filtering. For example:
 
 
 
-[User Query] → [Streamlit UI] → [Auth Check]
-                                   ↓
-                            [Query Parsing]
-                                   ↓
-                          [Query Encoding (SBERT)]
-                                   ↓
-        +-------------------[Search Execution]-------------------+
-        |                                                       |
-   [Local Search (FAISS)]                           [Web Scraping (DDG + Google Patents)]
-        ↓                                                       ↓
- [Filter Results (e.g., post-2020)]         [Extract & Encode Patent Data]
-        ↓                                                       ↓
-                 [Semantic Scoring & Snippet Highlighting]
-                                   ↓
-                      [Response Generation]
-                                   ↓
-                       [Display in Streamlit UI]
-                                   ↓
-                       [Update Chat History]
-
-
                        
 ## 🌱 Potential Future Improvements
 - Deploy to **Streamlit Cloud** or **HuggingFace Spaces**.
