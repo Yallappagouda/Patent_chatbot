@@ -1,0 +1,52 @@
+{
+    "manasadevikaas@gmail.com": {
+        "password": "ef797c8118f02dfb649607dd5d3f8c7623048c9c063d532cc95c5ed7a898a64f",
+        "history": [
+            {
+                "query": "biodegradable edible rice flour",
+                "results": [
+                    [
+                        0.3773781955242157,
+                        "KR20190128185A \u2014 Section \u00a7[0038]: The present invention describes edible and biodegradable compositions that can be made with the instrument. Also provided is a method of making an appliance.",
+                        "https://patents.google.com/patent/KR20190128185A/en"
+                    ],
+                    [
+                        -0.05798439681529999,
+                        "US20190380519A1 \u2014 Section \u00a7[0094]: This application claims priority from U.S. Provisional Patent Application No. 62/686,233, filed on Jun. 18, 2018, in the United States Patent and Trademark Office. The disclosure of which is incorporated herein by reference in its entirety.",
+                        "https://patents.google.com/patent/US20190380519A1/en"
+                    ]
+                ]
+            },
+            {
+                "query": "biodegradable edible rice flour",
+                "results": [
+                    [
+                        0.5089840888977051,
+                        "DE4203211A1 \u2014 Section \u00a7[0081]: A biodegradable container, esp. for foods contg. moisture, is made by adding reinforcing fibres to a dough suitable for baking waffles, and baking this dough in a baking mould (partly) covered with a moisture-proof film, to give a container of the required shape. The reinforcing fibres are organic, \u2026",
+                        "https://patents.google.com/patent/DE4203211A1/en"
+                    ],
+                    [
+                        0.4856674075126648,
+                        "WO2012098448A1 \u2014 Section \u00a7[0057]: Eco-friendly, biodegradable and edible cutleries, chopsticks, and all utensils used to lift food into mouth wherein the cutleries, chopsticks, and all other such utensils are made of flours having about 65% w/w or above carbohydrate content and contain no added preservatives or chemical additives an\u2026",
+                        "https://patents.google.com/patent/WO2012098448A1/en"
+                    ],
+                    [
+                        0.4801047742366791,
+                        "CN105557948A \u2014 Section \u00a7[0095]: The invention discloses biscuits prepared after refining a rice bran extracting solution and a preparation method thereof. The biscuits are prepared from, by weight, rice bran, cellulase, white granulated sugar, corn starch, dietary alkali, olive oil, an osmanthus fragrans extracting solution, flour\u2026",
+                        "https://patents.google.com/patent/CN105557948A/en"
+                    ],
+                    [
+                        0.44061172008514404,
+                        "WO2018157119A1 \u2014 Section \u00a7[0081]: The present disclosure describes edible and biodegradable compositions that can be made into utensils. Methods of making the utensils are also provided.",
+                        "https://patents.google.com/patent/WO2018157119A1/en"
+                    ],
+                    [
+                        0.37231504917144775,
+                        "CN1121452C \u2014 Section \u00a7[0035]: The present invention relates to a formula for biodegradable environment protection tableware and a production technique. The tableware is composed of starch, plant powder, polyethylene, polypropylene, glycerol, coupling agents, sorbitol and photosensitive agents. The tableware produced by the prese\u2026",
+                        "https://patents.google.com/patent/CN1121452C/en"
+                    ]
+                ]
+            }
+        ]
+    }
+}
